@@ -1,0 +1,525 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root {
+  --navy: #101c2c;
+  --gold: #c6a66b;
+  --ivory: #f7f5f0;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+  background: var(--ivory);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  min-height: 90px;
+  padding: 20px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.logo span {
+  display: block;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 5px;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 28px;
+}
+
+.site-header nav a {
+  font-size: 11px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.site-header nav a:hover,
+.aircraft-info a:hover {
+  color: var(--gold);
+}
+
+.header-button {
+  border: 1px solid var(--gold);
+  padding: 12px 17px;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.hero {
+  min-height: 660px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  color: var(--white);
+  background-image: url("https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=2000&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hero h1,
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+.hero-description {
+  max-width: 430px;
+  margin: 24px 0 32px;
+  font-size: 14px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.gold-button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 15px 24px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: background 0.3s;
+}
+
+.gold-button:hover {
+  background: var(--white);
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 28px;
+  right: 6%;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.section {
+  padding: 100px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: clamp(36px, 5vw, 52px);
+  margin-bottom: 15px;
+}
+
+.section-heading > p:last-child,
+.contact > p:not(.eyebrow),
+.experience > p:not(.eyebrow) {
+  color: #666d75;
+  font-size: 13px;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.aircraft-card {
+  background: var(--white);
+  overflow: hidden;
+}
+
+.aircraft-image {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s;
+}
+
+.aircraft-card:hover .aircraft-image {
+  filter: brightness(1.06);
+}
+
+.light-jet {
+  background-image: url("https://aviapages.com/media/2023/04/19/img-slider-fleet-praetor600-10-xl.jpg");
+}
+
+.midsize-jet {
+  background-image: url("https://images.aircharterservice.com/global/aircraft-guide/private-charter/bombardier-challenger-3500-2.jpg");
+}
+
+.heavy-jet {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Dassault_Falcon_8X%2C_Paris_Air_Show_2019%2C_Le_Bourget_%28SIAE8623%29.jpg");
+}
+
+.regional-jet {
+  background-image: url("https://resources.globalair.com/aircraftforsale/images/ads/137525_20_Global7500_sn70055-Ext1-1.jpg?bgcolor=white&h=530");
+}
+
+.airliner {
+  background-image: url("https://fl360aero.com/upload/blogs/1684_G700.20240208.jpg");
+}
+
+.aircraft-info {
+  padding: 25px 22px 28px;
+}
+
+.aircraft-category {
+  color: #8a795b;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 9px;
+}
+
+.aircraft-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.aircraft-info a {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.aircraft-card:hover .aircraft-info h3 {
+  color: var(--gold);
+}
+
+.experience {
+  text-align: center;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.experience > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0 auto 30px;
+  color: #d0d2d5;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact > p:not(.eyebrow) {
+  margin-bottom: 28px;
+}
+
+.site-footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 35px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.site-footer > p {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #c9cbd0;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .site-header nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fleet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 20px 5%;
+  }
+
+  .site-header nav {
+    gap: 15px;
+  }
+
+  .site-header nav a {
+    font-size: 10px;
+  }
+
+  .header-button {
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .hero {
+    min-height: 570px;
+    padding: 65px 7%;
+    background-position: 58% center;
+  }
+
+  .section {
+    padding: 70px 6%;
+  }
+
+  .fleet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aircraft-image {
+    height: 240px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+.gulfstream-g800 {
+  background-image: url("https://cdn.jetphotos.com/full/6/1148519_1771148706.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* QUICK FLIGHT REQUEST FORM */
+
+.hero {
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.quick-booking {
+  width: 360px;
+  flex-shrink: 0;
+  padding: 28px;
+  background: var(--ivory);
+  color: var(--navy);
+  border-top: 3px solid var(--gold);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.quick-booking .eyebrow {
+  margin-bottom: 8px;
+}
+
+.quick-booking h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 1.2;
+}
+
+.booking-subtitle {
+  margin: 8px 0 20px;
+  color: #666d75;
+  font-size: 12px;
+}
+
+#booking-form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+#booking-form input,
+#booking-form select {
+  width: 100%;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #d6d6d0;
+  border-radius: 0;
+  background: white;
+  color: var(--navy);
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.booking-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.booking-submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 10px;
+  border: 0;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.booking-submit:hover {
+  background: #b49356;
+}
+
+.booking-note {
+  margin-top: 12px;
+  color: #666d75;
+  font-size: 9px;
+  text-align: center;
+}
+
+#booking-message {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 65px 7%;
+  }
+
+  .quick-booking {
+    width: 100%;
+    max-width: 480px;
+    align-self: center;
+  }
+
+  .hero-caption {
+    position: static;
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+}
+
+/* METALLIC GOLD TYPOGRAPHY */
+
+:root {
+  --gold: #d4af37;
+}
+
+.logo,
+.logo span,
+.site-header nav a:hover,
+.eyebrow,
+.hero h1,
+.section h2,
+.aircraft-info h3,
+.aircraft-info a:hover,
+.hero-caption {
+  background: linear-gradient(
+    110deg,
+    #8f6b19 0%,
+    #f9e7a0 18%,
+    #c6a343 35%,
+    #fff4bd 50%,
+    #b38728 68%,
+    #f5df8b 85%,
+    #8f6b19 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo,
+.hero h1 {
+  filter: drop-shadow(0 1px 2px rgba(198, 166, 107, 0.25));
+}
+
+.quick-booking h2 {
+  background: linear-gradient(
+    110deg,
+    #8f6b19,
+    #f9e7a0,
+    #c6a343,
+    #fff4bd,
+    #8f6b19
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.field-error {
+  display: none;
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.field-error.show {
+  display: block;
+}

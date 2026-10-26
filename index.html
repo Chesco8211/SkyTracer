@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+    
+  </head>
+  <body>
+    
+<header class="site-header">
+  <a href="#" class="logo">SKYTRACER <span>PRIVATE JETS</span></a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#fleet">Our Fleet</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a href="#contact" class="header-button">BOOK A FLIGHT ↗</a>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">THE ART OF PRIVATE AVIATION</p>
+      <h1>Your World.<br>Without Limits.</h1>
+      <p class="hero-description">
+        Exceptional aircraft. Personalized service.
+        A journey designed entirely around you.
+      </p>
+      <a href="#fleet" class="gold-button">EXPLORE OUR FLEET ↗</a>
+    </div>
+    
+<div class="quick-booking">
+  <p class="eyebrow">PRIVATE AVIATION</p>
+  <h2>Request Your Flight</h2>
+  <p class="booking-subtitle">Your journey starts here.</p>
+
+
+<form id="booking-form">
+
+  <label for="departure">Departure Airport</label>
+  <select id="departure" name="departure" required>
+    <option value="">Select departure airport</option>
+    <option value="ATL">Atlanta — Hartsfield-Jackson (ATL)</option>
+    <option value="LAX">Los Angeles International (LAX)</option>
+    <option value="JFK">New York — JFK (JFK)</option>
+    <option value="LGA">New York — LaGuardia (LGA)</option>
+    <option value="EWR">Newark Liberty (EWR)</option>
+    <option value="MIA">Miami International (MIA)</option>
+    <option value="FLL">Fort Lauderdale (FLL)</option>
+    <option value="MCO">Orlando International (MCO)</option>
+    <option value="DFW">Dallas/Fort Worth (DFW)</option>
+    <option value="DAL">Dallas Love Field (DAL)</option>
+    <option value="ORD">Chicago O'Hare (ORD)</option>
+    <option value="MDW">Chicago Midway (MDW)</option>
+    <option value="DEN">Denver International (DEN)</option>
+    <option value="LAS">Las Vegas — Harry Reid (LAS)</option>
+    <option value="SFO">San Francisco International (SFO)</option>
+    <option value="SJC">San Jose International (SJC)</option>
+    <option value="SEA">Seattle-Tacoma (SEA)</option>
+    <option value="BOS">Boston Logan (BOS)</option>
+    <option value="PHX">Phoenix Sky Harbor (PHX)</option>
+    <option value="IAH">Houston — George Bush (IAH)</option>
+    <option value="HOU">Houston Hobby (HOU)</option>
+    <option value="CLT">Charlotte Douglas (CLT)</option>
+    <option value="IAD">Washington Dulles (IAD)</option>
+    <option value="DCA">Washington Reagan (DCA)</option>
+    <option value="PHL">Philadelphia International (PHL)</option>
+    <option value="SAN">San Diego International (SAN)</option>
+    <option value="TPA">Tampa International (TPA)</option>
+    <option value="BNA">Nashville International (BNA)</option>
+    <option value="AUS">Austin-Bergstrom (AUS)</option>
+    <option value="HNL">Honolulu International (HNL)</option>
+    <option value="OTHER">Other airport</option>
+  </select>
+
+  <label for="destination">Destination Airport</label>
+  <select id="destination" name="destination" required>
+    <option value="">Select destination airport</option>
+    <option value="ATL">Atlanta — Hartsfield-Jackson (ATL)</option>
+    <option value="LAX">Los Angeles International (LAX)</option>
+    <option value="JFK">New York — JFK (JFK)</option>
+    <option value="LGA">New York — LaGuardia (LGA)</option>
+    <option value="EWR">Newark Liberty (EWR)</option>
+    <option value="MIA">Miami International (MIA)</option>
+    <option value="FLL">Fort Lauderdale (FLL)</option>
+    <option value="MCO">Orlando International (MCO)</option>
+    <option value="DFW">Dallas/Fort Worth (DFW)</option>
+    <option value="DAL">Dallas Love Field (DAL)</option>
+    <option value="ORD">Chicago O'Hare (ORD)</option>
+    <option value="MDW">Chicago Midway (MDW)</option>
+    <option value="DEN">Denver International (DEN)</option>
+    <option value="LAS">Las Vegas — Harry Reid (LAS)</option>
+    <option value="SFO">San Francisco International (SFO)</option>
+    <option value="SJC">San Jose International (SJC)</option>
+    <option value="SEA">Seattle-Tacoma (SEA)</option>
+    <option value="BOS">Boston Logan (BOS)</option>
+    <option value="PHX">Phoenix Sky Harbor (PHX)</option>
+    <option value="IAH">Houston — George Bush (IAH)</option>
+    <option value="HOU">Houston Hobby (HOU)</option>
+    <option value="CLT">Charlotte Douglas (CLT)</option>
+    <option value="IAD">Washington Dulles (IAD)</option>
+    <option value="DCA">Washington Reagan (DCA)</option>
+    <option value="PHL">Philadelphia International (PHL)</option>
+    <option value="SAN">San Diego International (SAN)</option>
+    <option value="TPA">Tampa International (TPA)</option>
+    <option value="BNA">Nashville International (BNA)</option>
+    <option value="AUS">Austin-Bergstrom (AUS)</option>
+    <option value="HNL">Honolulu International (HNL)</option>
+    <option value="OTHER">Other airport</option>
+  </select>
+
+  <div class="booking-row">
+    <div>
+<label for="flight-date">Departure date</label>
+<input
+  id="flight-date"
+  name="date"
+  type="date"
+  required
+>
+    </div>
+
+    <div>
+      <label for="trip-type">Trip type</label>
+      <select id="trip-type" name="tripType" required>
+        <option value="one-way">One Way</option>
+        <option value="round-trip">Round Trip</option>
+      </select>
+    </div>
+  </div>
+
+ <div>
+  <label for="return-date">Return date</label>
+  <input
+    id="return-date"
+    name="returnDate"
+    type="date"
+  >
+  <small id="return-date-error" class="field-error">
+    Campo requerido
+  </small>
+</div>
+
+  
+<div class="booking-row">
+  <div>
+    <label for="passengers">Passengers</label>
+    <select id="passengers" name="passengers" required>
+      <option value="">Select passenger range</option>
+      <option value="1-7">1–7 passengers</option>
+      <option value="8-11">8–11 passengers</option>
+      <option value="12-20">12–20 passengers</option>
+      <option value="21-30">21–30 passengers</option>
+      <option value="30+">More than 30 passengers</option>
+    </select>
+  </div>
+
+  <div class="hotel-option">
+    <label for="hotel">Luxury accommodation</label>
+    <select id="hotel" name="hotel">
+      <option value="none">No hotel required</option>
+      <option value="five-star">5-Star Hotel</option>
+      <option value="diamond">Diamond Luxury Experience</option>
+    </select>
+  </div>
+</div>
+
+<button type="submit" class="booking-submit">
+  REQUEST YOUR FLIGHT ↗
+</button>
+
+<p class="booking-note">
+  Your request is subject to flight availability and confirmation.
+</p>
+
+<p id="booking-message"></p>
+
+</form>
+</div>
+
+
+    <p class="hero-caption">YOUR JOURNEY BEGINS HERE</p>
+  </section>
+
+  <section class="fleet section" id="fleet">
+    <div class="section-heading">
+      <p class="eyebrow">EXCEPTIONAL AIRCRAFT</p>
+      <h2>Our Fleet</h2>
+      <p>Discover a new standard of private air travel.</p>
+    </div>
+
+    <div class="fleet-grid">
+      <article class="aircraft-card">
+        <div class="aircraft-image light-jet"></div>
+        <div class="aircraft-info">
+          <p class="aircraft-category">SUPER MIDSIZE JET</p>
+          <h3>Embraer Praetor 600</h3>
+          <a href="#contact">EXPLORE THIS AIRCRAFT ↗</a>
+        </div>
+      </article>
+
+      <article class="aircraft-card">
+        <div class="aircraft-image midsize-jet"></div>
+        <div class="aircraft-info">
+          <p class="aircraft-category">SUPER MIDSIZE JET</p>
+          <h3>Bombardier Challenger 3500</h3>
+          <a href="#contact">EXPLORE THIS AIRCRAFT ↗</a>
+        </div>
+      </article>
+
+      <article class="aircraft-card">
+        <div class="aircraft-image heavy-jet"></div>
+        <div class="aircraft-info">
+          <p class="aircraft-category">ULTRA LONG RANGE</p>
+          <h3>Dassault Falcon 8X</h3>
+          <a href="#contact">EXPLORE THIS AIRCRAFT ↗</a>
+        </div>
+      </article>
+
+      <article class="aircraft-card">
+        <div class="aircraft-image regional-jet"></div>
+        <div class="aircraft-info">
+          <p class="aircraft-category">ULTRA LONG RANGE</p>
+          <h3>Bombardier Global 7500</h3>
+          <a href="#contact">EXPLORE THIS AIRCRAFT ↗</a>
+        </div>
+      </article>
+
+      <article class="aircraft-card">
+        <div class="aircraft-image airliner"></div>
+        <div class="aircraft-info">
+          <p class="aircraft-category">ULTRA LONG RANGE</p>
+          <h3>Gulfstream G700</h3>
+          <a href="#contact">EXPLORE THIS AIRCRAFT ↗</a>
+        </div>
+      </article>
+      <article class="aircraft-card">
+  <div 
+    class="aircraft-image gulfstream-g800">
+    
+  </div>
+  <div class="aircraft-info">
+    <p class="aircraft-category">ULTRA LONG RANGE</p>
+    <h3>Gulfstream G800</h3>
+    <a href="#contact">EXPLORE THIS AIRCRAFT ↗</a>
+  </div>
+</article>
+    </div>
+  </section>
+
+  <section class="experience section" id="experience">
+    <p class="eyebrow">MORE THAN A FLIGHT</p>
+    <h2>Travel Beyond Expectations.</h2>
+    <p>
+      From your first inquiry to your final destination,
+      every detail is designed around your journey.
+    </p>
+    <a href="#contact" class="gold-button">DISCOVER THE EXPERIENCE ↗</a>
+  </section>
+
+  <section class="contact section" id="contact">
+    <p class="eyebrow">YOUR NEXT JOURNEY AWAITS</p>
+    <h2>Let's Plan Your Flight.</h2>
+    <p>Tell us where you want to go. We'll help you plan the journey.</p>
+    <a href="mailto:info@skytracerjets.com" class="gold-button">
+      REQUEST A FLIGHT ↗
+    </a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <a href="#home" class="logo">SKYTRACER <span>PRIVATE JETS</span></a>
+  <p>PRIVATE AVIATION. PERSONALIZED.</p>
+  <p>© 2026 SkyTracer Private Jets</p>
+</footer>
+
+
+ 
+  </body>
+</html>
